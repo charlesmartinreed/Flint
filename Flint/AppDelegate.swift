@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        //MARK:- Parse configuration
+        let configuration = ParseClientConfiguration { (config) in
+            config.applicationId = "a92k182nfnj3_!"
+            config.server = "https://flint-is-definitely-not-tinder.herokuapp.com/parse"
+            config.clientKey = "e2812+#kceaumm"
+        }
+        Parse.initialize(with: configuration)
         
         return true
     }
