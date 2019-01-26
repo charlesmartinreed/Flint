@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C690D42DC7BD96E7804B16D /* Pods_Flint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04118CE1FE654A7A3A438E6A /* Pods_Flint.framework */; };
 		8CA25F8121F5207600F05F99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA25F8021F5207600F05F99 /* AppDelegate.swift */; };
 		8CA25F8321F5207600F05F99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA25F8221F5207600F05F99 /* ViewController.swift */; };
 		8CA25F8621F5207600F05F99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CA25F8421F5207600F05F99 /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04118CE1FE654A7A3A438E6A /* Pods_Flint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		11C61858C58FD276B389D4B8 /* Pods-Flint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flint.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Flint/Pods-Flint.debug.xcconfig"; sourceTree = "<group>"; };
 		8CA25F7D21F5207600F05F99 /* Flint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CA25F8021F5207600F05F99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CA25F8221F5207600F05F99 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		8CA25F8721F5207700F05F99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CA25F8A21F5207700F05F99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8CA25F8C21F5207700F05F99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92878BF17DB97EA727373466 /* Pods-Flint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flint.release.xcconfig"; path = "Pods/Target Support Files/Pods-Flint/Pods-Flint.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C690D42DC7BD96E7804B16D /* Pods_Flint.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				8CA25F7F21F5207600F05F99 /* Flint */,
 				8CA25F7E21F5207600F05F99 /* Products */,
+				A9E2CC37430DAF8C33B9ED7A /* Pods */,
+				B1A8D9F9B4609FE3C07A8368 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = Flint;
 			sourceTree = "<group>";
 		};
+		A9E2CC37430DAF8C33B9ED7A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				11C61858C58FD276B389D4B8 /* Pods-Flint.debug.xcconfig */,
+				92878BF17DB97EA727373466 /* Pods-Flint.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B1A8D9F9B4609FE3C07A8368 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04118CE1FE654A7A3A438E6A /* Pods_Flint.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8CA25F8F21F5207700F05F99 /* Build configuration list for PBXNativeTarget "Flint" */;
 			buildPhases = (
+				E6B6FE44B33F2BDA36465F02 /* [CP] Check Pods Manifest.lock */,
 				8CA25F7921F5207500F05F99 /* Sources */,
 				8CA25F7A21F5207500F05F99 /* Frameworks */,
 				8CA25F7B21F5207500F05F99 /* Resources */,
+				604036D26608E6E68A1B4B31 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		604036D26608E6E68A1B4B31 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Flint/Pods-Flint-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Flint/Pods-Flint-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6B6FE44B33F2BDA36465F02 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Flint-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8CA25F7921F5207500F05F99 /* Sources */ = {
@@ -280,6 +347,7 @@
 		};
 		8CA25F9021F5207700F05F99 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11C61858C58FD276B389D4B8 /* Pods-Flint.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +365,7 @@
 		};
 		8CA25F9121F5207700F05F99 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92878BF17DB97EA727373466 /* Pods-Flint.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
