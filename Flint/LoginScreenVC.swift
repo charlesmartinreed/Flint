@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class LoginScreenVC: UIViewController, Storyboarded {
     
@@ -18,12 +19,14 @@ class LoginScreenVC: UIViewController, Storyboarded {
     //MARK:- Properties
     var animationColors: [UIColor] = [UIColor.hexFF8F56, UIColor.hexFF5959, UIColor.hex984A59, UIColor.hex60424C]
     weak var coordinator: MainCoordinator?
+    
     var currentColorIndex = 0
     var colorShiftTimer: Timer!
     var colorShiftDuration: TimeInterval = 3.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        coordinator?.delegate = self
         
         view.setGradientBackground(colors: animationColors)
         
@@ -37,26 +40,31 @@ class LoginScreenVC: UIViewController, Storyboarded {
         guard let username = usernameTextField.text else { return }
         guard let password = passwordTextField.text else { return }
         
-        //checking is handled by the coordinator here
-        guard let result = coordinator?.login(user: username, password: password) else { return }
-        if result.success == false {
-            displayAlert(title: "There was a problem logging in", message: result.details)
+        if !username.isEmpty && !password.isEmpty {
+            coordinator?.loginAttempt(username: username, password: password)
         }
+        
     }
     
     @IBAction func signupButtonTapped(_ sender: UIButton) {
         guard let username = usernameTextField.text else { return }
         guard let password = passwordTextField.text else { return }
         
-        guard let result = coordinator?.signup(user: username, password: password) else { return }
-        if result.success == false {
-            displayAlert(title: "There was a problem signing up", message: result.details)
+        //checking is handled by the coordinator here
+        if !username.isEmpty && !password.isEmpty {
+            coordinator?.signUpAttempt(username: username, password: password)
         }
-        
     }
-    
-    
-    
+}
+
+extension LoginScreenVC : CoordinatorDelegate {
+    func displayAlert(title: String, message: String) {
+        let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        ac.addAction(action)
+        
+        present(ac, animated: true, completion: nil)
+    }
 }
 
 

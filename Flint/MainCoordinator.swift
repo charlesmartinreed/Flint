@@ -7,10 +7,17 @@
 //
 
 import UIKit
+import Parse
+
+protocol CoordinatorDelegate {
+    func displayAlert(title: String, message: String)
+}
 
 class MainCoordinator : Coordinator {
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
+    var delegate: CoordinatorDelegate?
+    var user: PFUser?
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -23,27 +30,33 @@ class MainCoordinator : Coordinator {
         navigationController.pushViewController(vc, animated: false) //false because this is our entry point
     }
     
-    func login(user: String, password: String) -> (success: Bool, details: String) {
-        //attempt to login, if user exists, push them to the main screen
-        if !user.isEmpty && !password.isEmpty {
-            print("log in pressed")
-            return (true, "")
-        } else {
-            return (false, "Dummy error: This user does not currently exist.")
-        }
-        
+    func moveToProfileScreen() {
+        let vc = ProfileScreenVC.instantiate()
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
     }
     
-    func signup(user: String, password: String) -> (success: Bool, details: String) {
-        //if able to sign in, take user to the profile page so that they can setup username, add photo, bio info, etc.
+    func signUpAttempt(username: String, password: String) {
+        user = PFUser()
+        user?.username = username
+        user?.password = password
         
-        if !user.isEmpty && !password.isEmpty {
-            //try to log in with the credentials here
-            print("sign in pressed")
-            return (true, "")
-        } else {
-            //grab the error message from Parse here
-            return (false, "Dummy error: Unable to sign up... for reasons.")
-        }
+        user?.signUpInBackground(block: { (success, error) in
+            if let err = error {
+                self.delegate?.displayAlert(title: "Uh-oh!", message: err.localizedDescription)
+            } else {
+                print("sign up successful")
+                //moveToProfileScreen()
+            }
+        })
+    }
+    
+    func loginAttempt(username: String, password: String) {
+        //if able to sign in, take user to the profile page so that they can setup username, add photo, bio info, etc.
+        user = PFUser()
+        user?.username = username
+        user?.password = password
+        
+        //attempt to login
     }
 }

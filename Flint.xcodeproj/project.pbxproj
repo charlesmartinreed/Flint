@@ -24,6 +24,7 @@
 		8CDDB2A521FD907E004A5795 /* AmaticSC-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8CDDB2A321FD907E004A5795 /* AmaticSC-Regular.ttf */; };
 		8CE19FE621FD960C00711DEC /* DarkTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE19FE521FD960C00711DEC /* DarkTextField.swift */; };
 		8CE19FE821FD9F7500711DEC /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE19FE721FD9F7500711DEC /* UIViewController+Extension.swift */; };
+		8CE19FEA21FDA42700711DEC /* ProfileScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE19FE921FDA42700711DEC /* ProfileScreenVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		8CDDB2A321FD907E004A5795 /* AmaticSC-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AmaticSC-Regular.ttf"; sourceTree = "<group>"; };
 		8CE19FE521FD960C00711DEC /* DarkTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkTextField.swift; sourceTree = "<group>"; };
 		8CE19FE721FD9F7500711DEC /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		8CE19FE921FDA42700711DEC /* ProfileScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenVC.swift; sourceTree = "<group>"; };
 		92878BF17DB97EA727373466 /* Pods-Flint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flint.release.xcconfig"; path = "Pods/Target Support Files/Pods-Flint/Pods-Flint.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,6 +91,7 @@
 				8CDDB29A21FD658F004A5795 /* MainCoordinator.swift */,
 				8CDDB29421FD6476004A5795 /* LoginScreenVC.swift */,
 				8CA25F8221F5207600F05F99 /* MatchScreenVC.swift */,
+				8CE19FE921FDA42700711DEC /* ProfileScreenVC.swift */,
 				8CA25F8421F5207600F05F99 /* Main.storyboard */,
 				8CA25F8721F5207700F05F99 /* Assets.xcassets */,
 				8CA25F8921F5207700F05F99 /* LaunchScreen.storyboard */,
@@ -247,6 +250,7 @@
 				8CA25F8321F5207600F05F99 /* MatchScreenVC.swift in Sources */,
 				8CE19FE621FD960C00711DEC /* DarkTextField.swift in Sources */,
 				8CE19FE821FD9F7500711DEC /* UIViewController+Extension.swift in Sources */,
+				8CE19FEA21FDA42700711DEC /* ProfileScreenVC.swift in Sources */,
 				8CA25F8121F5207600F05F99 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

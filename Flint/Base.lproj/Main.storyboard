@@ -151,5 +151,32 @@
             </objects>
             <point key="canvasLocation" x="610.39999999999998" y="65.217391304347828"/>
         </scene>
+        <!--Profile ScreenVC-->
+        <scene sceneID="fj6-6c-J07">
+            <objects>
+                <viewController storyboardIdentifier="ProfileScreenVC" id="9Fe-AD-Fe4" customClass="ProfileScreenVC" customModule="Flint" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tcD-zl-RWc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the Profile Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DuM-62-187">
+                                <rect key="frame" x="92.5" y="323" width="190" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DuM-62-187" firstAttribute="centerX" secondItem="tcD-zl-RWc" secondAttribute="centerX" id="7hN-iS-19v"/>
+                            <constraint firstItem="DuM-62-187" firstAttribute="centerY" secondItem="tcD-zl-RWc" secondAttribute="centerY" id="8gu-i1-3Jq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RbW-PZ-WVe"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vD3-Jy-bzq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1353" y="65"/>
+        </scene>
     </scenes>
 </document>
