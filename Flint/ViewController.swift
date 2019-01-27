@@ -37,8 +37,14 @@ class ViewController: UIViewController {
     @objc func itemWasDragged(recognizer: UIPanGestureRecognizer) {
         let screenWidth = view.bounds.width
         let screenHeight = view.bounds.height
-        
         let upddatedItemPoint = recognizer.translation(in: view) //where the user is trying to move to
+        
+        //MARK:- Image rotation and scaling
+        let xFromCenter = screenWidth / 2 - swipeImageView.center.x //this covers values greater AND less than the center point, which gives us a rotation angle of positive or negative values depending upon which way we swipe.
+        let scale = min(abs(100 / xFromCenter), 1) //the further from the center, the smaller the scale amount. Min to prevent the excessively large scale issue from being close to the center point when first beginning the pan gesture.
+        let rotation = CGAffineTransform(rotationAngle: xFromCenter / 200)
+        let scaleAndRotate = rotation.scaledBy(x: scale, y: scale)
+        swipeImageView.transform = scaleAndRotate
         
         swipeImageView.center = CGPoint(x: screenWidth / 2 + upddatedItemPoint.x, y: screenHeight / 2 + upddatedItemPoint.y)
         
@@ -52,6 +58,7 @@ class ViewController: UIViewController {
                 print("Swiped right! So thirsty!")
             }
             
+            swipeImageView.transform = .identity
             swipeImageView.center = CGPoint(x: screenWidth / 2, y: screenHeight / 2 - imageViewOffsetFromTop)
         }
     }
