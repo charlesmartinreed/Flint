@@ -17,7 +17,8 @@ class MainCoordinator : Coordinator {
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
     var delegate: CoordinatorAlertDelegate?
-    var user: PFUser?
+    
+    var currentUser = PFUser.current()
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -28,6 +29,12 @@ class MainCoordinator : Coordinator {
         let vc = LoginScreenVC.instantiate()
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: false) //false because this is our entry point
+        
+        if currentUser != nil {
+            moveToProfileScreen()
+        } else {
+            print("No current user found")
+        }
     }
     
     func moveToProfileScreen() {
@@ -37,15 +44,16 @@ class MainCoordinator : Coordinator {
     }
     
     func signUpAttempt(username: String, password: String) {
-        user = PFUser()
-        user?.username = username
-        user?.password = password
+        let user = PFUser()
+        user.username = username
+        user.password = password
         
-        user?.signUpInBackground(block: { (success, error) in
+        user.signUpInBackground(block: { (success, error) in
             if let err = error {
                 self.delegate?.displayAlert(title: "Uh-oh!", message: err.localizedDescription)
             } else {
                 print("sign up successful")
+                self.currentUser = user
                 self.moveToProfileScreen()
             }
         })
@@ -57,12 +65,10 @@ class MainCoordinator : Coordinator {
             if let err = error {
                 self.delegate?.displayAlert(title: "Oh no!", message: err.localizedDescription)
             } else {
-                print("sign up successful")
-                self.user = user
+                print("log in successful")
+                self.currentUser = user
                 self.moveToProfileScreen()
             }
         }
-        
-        //attempt to login
     }
 }

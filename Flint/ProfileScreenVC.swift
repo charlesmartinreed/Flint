@@ -11,18 +11,44 @@ import Parse
 
 class ProfileScreenVC: UIViewController, Storyboarded {
 
+    //MARK:- IBOutlet
+    @IBOutlet weak var profileImageButton: ProfileImage!
+    @IBOutlet weak var usernameButton: UIButton!
+    @IBOutlet weak var userSegControl: UISegmentedControl!
+    @IBOutlet weak var userPrefSegControl: UISegmentedControl!
+    
     //MARK:- Properties
     weak var coordinator: MainCoordinator?
-    weak var user: PFUser?
+    weak var currentUser: PFUser!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        user = coordinator?.user
         
-        print("Welcome, \(user?.username ?? "user not found")")
-
-        // Do any additional setup after loading the view.
+        currentUser = coordinator?.currentUser
+        usernameButton.setTitle("\(currentUser.username ?? "Username")", for: .normal)
+        
     }
+    
+    //MARK:- IBAction
+    @IBAction func changeProfileImageButtonTapped(_ sender: ProfileImage) {
+        print("image button tapped")
+    }
+    
+    @IBAction func changeUsernameButtonTapped(_ sender: UIButton) {
+        print("username button tapped")
+    }
+    
+    @IBAction func cancelButtonTapped(_ sender: CancelButton) {
+        coordinator?.navigationController.popViewController(animated: true)
+    }
+    
+    
+    func saveProfileChanges() {
+        //trigered when the user either leaves by clicking the X button or as soon as a change is detected in one of the interactable fields
+        print("profile settings updated")
+    }
+    
+    
     
 
     /*

@@ -25,6 +25,7 @@
 		8CE19FE621FD960C00711DEC /* DarkTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE19FE521FD960C00711DEC /* DarkTextField.swift */; };
 		8CE19FE821FD9F7500711DEC /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE19FE721FD9F7500711DEC /* UIViewController+Extension.swift */; };
 		8CE19FEA21FDA42700711DEC /* ProfileScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE19FE921FDA42700711DEC /* ProfileScreenVC.swift */; };
+		8CE19FEC21FE605400711DEC /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE19FEB21FE605400711DEC /* UIButton+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		8CE19FE521FD960C00711DEC /* DarkTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkTextField.swift; sourceTree = "<group>"; };
 		8CE19FE721FD9F7500711DEC /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		8CE19FE921FDA42700711DEC /* ProfileScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenVC.swift; sourceTree = "<group>"; };
+		8CE19FEB21FE605400711DEC /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		92878BF17DB97EA727373466 /* Pods-Flint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flint.release.xcconfig"; path = "Pods/Target Support Files/Pods-Flint/Pods-Flint.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +103,7 @@
 				8CDDB2A021FD7F8B004A5795 /* LeagueSpartan-Bold.otf */,
 				8CDDB29C21FD6911004A5795 /* Colors.swift */,
 				8CE19FE521FD960C00711DEC /* DarkTextField.swift */,
+				8CE19FEB21FE605400711DEC /* UIButton+Extension.swift */,
 				8CDDB29E21FD751E004A5795 /* UIView+Extension.swift */,
 				8CE19FE721FD9F7500711DEC /* UIViewController+Extension.swift */,
 			);
@@ -246,6 +249,7 @@
 				8CDDB29F21FD751E004A5795 /* UIView+Extension.swift in Sources */,
 				8CDDB29521FD6476004A5795 /* LoginScreenVC.swift in Sources */,
 				8CDDB29D21FD6911004A5795 /* Colors.swift in Sources */,
+				8CE19FEC21FE605400711DEC /* UIButton+Extension.swift in Sources */,
 				8CDDB29921FD64C7004A5795 /* Storyboarded.swift in Sources */,
 				8CA25F8321F5207600F05F99 /* MatchScreenVC.swift in Sources */,
 				8CE19FE621FD960C00711DEC /* DarkTextField.swift in Sources */,

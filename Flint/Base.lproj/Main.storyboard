@@ -48,7 +48,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-206" y="67"/>
+            <point key="canvasLocation" x="519" y="845"/>
         </scene>
         <!--Login ScreenVC-->
         <scene sceneID="ZXD-d4-tOS">
@@ -149,7 +149,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tFw-B5-rhA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="610.39999999999998" y="65.217391304347828"/>
+            <point key="canvasLocation" x="-42" y="63"/>
         </scene>
         <!--Profile ScreenVC-->
         <scene sceneID="fj6-6c-J07">
@@ -159,24 +159,116 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the Profile Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DuM-62-187">
-                                <rect key="frame" x="92.5" y="323" width="190" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rb-GI-JOY" customClass="ProfileImage" customModule="Flint" customModuleProvider="target">
+                                <rect key="frame" x="87.5" y="60" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="GxW-En-Kf6"/>
+                                    <constraint firstAttribute="width" constant="200" id="qmg-AJ-TpB"/>
+                                </constraints>
+                                <state key="normal" image="demoProfileImage"/>
+                                <connections>
+                                    <action selector="changeProfileImageButtonTapped:" destination="9Fe-AD-Fe4" eventType="touchUpInside" id="PqE-i8-z1O"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IuD-vb-C0Y">
+                                <rect key="frame" x="8" y="287" width="359" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="fgL-zs-ARd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Amatic-Bold" family="Amatic" pointSize="28"/>
+                                <state key="normal" title="USERNAME">
+                                    <color key="titleColor" red="0.074509803920000006" green="0.1333333333" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeUsernameButtonTapped:" destination="9Fe-AD-Fe4" eventType="touchUpInside" id="wp4-Ev-Pai"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Rm5-Qz-yUH">
+                                <rect key="frame" x="16" y="386" width="343" height="29"/>
+                                <segments>
+                                    <segment title="Non-binary"/>
+                                    <segment title="Intersex"/>
+                                    <segment title="Female"/>
+                                    <segment title="Male"/>
+                                </segments>
+                                <color key="tintColor" red="0.36470588240000001" green="0.32549019610000002" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bka-iC-ehK">
+                                <rect key="frame" x="16" y="352" width="344" height="26"/>
+                                <fontDescription key="fontDescription" name="AmaticSC-Regular" family="Amatic SC" pointSize="20"/>
+                                <color key="textColor" red="0.074509803920000006" green="0.1333333333" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Pji-dy-90n">
+                                <rect key="frame" x="8" y="479" width="359" height="29"/>
+                                <segments>
+                                    <segment title="Love"/>
+                                    <segment title="Non-binary"/>
+                                    <segment title="Intersex"/>
+                                    <segment title="Female"/>
+                                    <segment title="Male"/>
+                                </segments>
+                                <color key="tintColor" red="0.36470588240000001" green="0.32549019610000002" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am looking for:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lD4-hZ-GcH">
+                                <rect key="frame" x="16" y="445" width="343" height="26"/>
+                                <fontDescription key="fontDescription" name="AmaticSC-Regular" family="Amatic SC" pointSize="20"/>
+                                <color key="textColor" red="0.074509803920000006" green="0.1333333333" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hB-ld-uog" customClass="CancelButton" customModule="Flint" customModuleProvider="target">
+                                <rect key="frame" x="315" y="20" width="52" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="Jcs-yu-daO"/>
+                                    <constraint firstAttribute="width" constant="52" id="Phq-ue-6eG"/>
+                                </constraints>
+                                <state key="normal" image="CancelButtonDark"/>
+                                <connections>
+                                    <action selector="cancelButtonTapped:" destination="9Fe-AD-Fe4" eventType="touchUpInside" id="Ly3-vS-jru"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.92156862750000001" green="0.94117647059999998" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="DuM-62-187" firstAttribute="centerX" secondItem="tcD-zl-RWc" secondAttribute="centerX" id="7hN-iS-19v"/>
-                            <constraint firstItem="DuM-62-187" firstAttribute="centerY" secondItem="tcD-zl-RWc" secondAttribute="centerY" id="8gu-i1-3Jq"/>
+                            <constraint firstItem="IuD-vb-C0Y" firstAttribute="leading" secondItem="RbW-PZ-WVe" secondAttribute="leading" constant="8" id="5fo-Yg-94y"/>
+                            <constraint firstItem="Rm5-Qz-yUH" firstAttribute="leading" secondItem="RbW-PZ-WVe" secondAttribute="leading" constant="16" id="A58-vX-TQV"/>
+                            <constraint firstAttribute="trailing" secondItem="Pji-dy-90n" secondAttribute="trailing" constant="8" id="AZE-MW-gEV"/>
+                            <constraint firstItem="Pji-dy-90n" firstAttribute="top" secondItem="lD4-hZ-GcH" secondAttribute="bottom" constant="8" id="As6-Pu-Jjq"/>
+                            <constraint firstItem="RbW-PZ-WVe" firstAttribute="trailing" secondItem="8hB-ld-uog" secondAttribute="trailing" constant="8" id="Erq-ca-ogw"/>
+                            <constraint firstItem="Bka-iC-ehK" firstAttribute="top" secondItem="IuD-vb-C0Y" secondAttribute="bottom" constant="25" id="NjZ-cs-yI1"/>
+                            <constraint firstItem="3rb-GI-JOY" firstAttribute="centerX" secondItem="tcD-zl-RWc" secondAttribute="centerX" id="ORt-kO-hbq"/>
+                            <constraint firstItem="Bka-iC-ehK" firstAttribute="leading" secondItem="RbW-PZ-WVe" secondAttribute="leading" constant="16" id="QQ2-MS-GP4"/>
+                            <constraint firstItem="IuD-vb-C0Y" firstAttribute="top" secondItem="3rb-GI-JOY" secondAttribute="bottom" constant="27" id="R9S-fr-woo"/>
+                            <constraint firstItem="3rb-GI-JOY" firstAttribute="top" secondItem="RbW-PZ-WVe" secondAttribute="top" constant="40" id="SEL-47-AXf"/>
+                            <constraint firstItem="Pji-dy-90n" firstAttribute="centerX" secondItem="tcD-zl-RWc" secondAttribute="centerX" id="U97-Ym-Ycl"/>
+                            <constraint firstItem="RbW-PZ-WVe" firstAttribute="trailing" secondItem="IuD-vb-C0Y" secondAttribute="trailing" constant="8" id="aWw-rr-FmC"/>
+                            <constraint firstItem="Rm5-Qz-yUH" firstAttribute="top" secondItem="Bka-iC-ehK" secondAttribute="bottom" constant="8" id="cFK-Xv-16s"/>
+                            <constraint firstItem="RbW-PZ-WVe" firstAttribute="trailing" secondItem="Bka-iC-ehK" secondAttribute="trailing" constant="15" id="cIM-fx-hA4"/>
+                            <constraint firstItem="lD4-hZ-GcH" firstAttribute="leading" secondItem="RbW-PZ-WVe" secondAttribute="leading" constant="16" id="dZ4-hf-jeV"/>
+                            <constraint firstItem="Rm5-Qz-yUH" firstAttribute="centerX" secondItem="tcD-zl-RWc" secondAttribute="centerX" id="hQw-VC-m64"/>
+                            <constraint firstItem="Pji-dy-90n" firstAttribute="leading" secondItem="tcD-zl-RWc" secondAttribute="leading" constant="8" id="qZJ-oH-DMw"/>
+                            <constraint firstItem="IuD-vb-C0Y" firstAttribute="centerX" secondItem="tcD-zl-RWc" secondAttribute="centerX" id="qcY-kI-pQI"/>
+                            <constraint firstItem="lD4-hZ-GcH" firstAttribute="top" secondItem="Rm5-Qz-yUH" secondAttribute="bottom" constant="31" id="x2e-fd-fTS"/>
+                            <constraint firstItem="RbW-PZ-WVe" firstAttribute="trailing" secondItem="lD4-hZ-GcH" secondAttribute="trailing" constant="16" id="xU0-vK-0qY"/>
+                            <constraint firstItem="RbW-PZ-WVe" firstAttribute="trailing" secondItem="Rm5-Qz-yUH" secondAttribute="trailing" constant="16" id="z5m-MJ-xeR"/>
+                            <constraint firstItem="8hB-ld-uog" firstAttribute="top" secondItem="RbW-PZ-WVe" secondAttribute="top" id="zli-ux-VLp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RbW-PZ-WVe"/>
                     </view>
+                    <connections>
+                        <outlet property="profileImageButton" destination="3rb-GI-JOY" id="xos-Ub-1Ve"/>
+                        <outlet property="userPrefSegControl" destination="Pji-dy-90n" id="dw3-E4-aUX"/>
+                        <outlet property="userSegControl" destination="Rm5-Qz-yUH" id="wj8-ur-LvM"/>
+                        <outlet property="usernameButton" destination="IuD-vb-C0Y" id="eMJ-Nv-8cX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vD3-Jy-bzq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1353" y="65"/>
+            <point key="canvasLocation" x="804" y="62.518740629685162"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="CancelButtonDark" width="26" height="26"/>
+        <image name="demoProfileImage" width="640" height="960"/>
+    </resources>
 </document>
