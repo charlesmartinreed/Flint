@@ -42,6 +42,8 @@ class LoginScreenVC: UIViewController, Storyboarded {
         
         if !username.isEmpty && !password.isEmpty {
             coordinator?.loginAttempt(username: username, password: password)
+        } else {
+            displayAlert(title: "Hold up!", message: "You'll need both a username and a password to sign up.")
         }
         
     }
@@ -57,7 +59,7 @@ class LoginScreenVC: UIViewController, Storyboarded {
     }
 }
 
-extension LoginScreenVC : CoordinatorDelegate {
+extension LoginScreenVC : CoordinatorAlertDelegate {
     func displayAlert(title: String, message: String) {
         let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)

@@ -9,14 +9,14 @@
 import UIKit
 import Parse
 
-protocol CoordinatorDelegate {
+protocol CoordinatorAlertDelegate {
     func displayAlert(title: String, message: String)
 }
 
 class MainCoordinator : Coordinator {
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
-    var delegate: CoordinatorDelegate?
+    var delegate: CoordinatorAlertDelegate?
     var user: PFUser?
     
     init(navigationController: UINavigationController) {
@@ -46,16 +46,22 @@ class MainCoordinator : Coordinator {
                 self.delegate?.displayAlert(title: "Uh-oh!", message: err.localizedDescription)
             } else {
                 print("sign up successful")
-                //moveToProfileScreen()
+                self.moveToProfileScreen()
             }
         })
     }
     
     func loginAttempt(username: String, password: String) {
         //if able to sign in, take user to the profile page so that they can setup username, add photo, bio info, etc.
-        user = PFUser()
-        user?.username = username
-        user?.password = password
+        PFUser.logInWithUsername(inBackground: username, password: password) { (user, error) in
+            if let err = error {
+                self.delegate?.displayAlert(title: "Oh no!", message: err.localizedDescription)
+            } else {
+                print("sign up successful")
+                self.user = user
+                self.moveToProfileScreen()
+            }
+        }
         
         //attempt to login
     }

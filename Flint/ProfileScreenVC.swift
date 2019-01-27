@@ -7,14 +7,19 @@
 //
 
 import UIKit
+import Parse
 
 class ProfileScreenVC: UIViewController, Storyboarded {
 
     //MARK:- Properties
     weak var coordinator: MainCoordinator?
+    weak var user: PFUser?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        user = coordinator?.user
+        
+        print("Welcome, \(user?.username ?? "user not found")")
 
         // Do any additional setup after loading the view.
     }
