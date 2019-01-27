@@ -22,4 +22,14 @@ class MainCoordinator : Coordinator {
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: false) //false because this is our entry point
     }
+    
+    func login() {
+        //attempt to login, if user exists, push them to the main screen
+        print("log in pressed")
+    }
+    
+    func signup() {
+        //if able to sign in, take user to the profile page so that they can setup username, add photo, bio info, etc.
+        print("sign in pressed")
+    }
 }

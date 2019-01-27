@@ -10,6 +10,11 @@ import UIKit
 
 class LoginScreenVC: UIViewController, Storyboarded {
     
+    //MARK:- IBOutlets
+    @IBOutlet weak var flintLogoLabel: UILabel!
+    @IBOutlet weak var usernameTextField: DarkTextField!
+    @IBOutlet weak var passwordTextField: DarkTextField!
+    
     //MARK:- Properties
     var animationColors: [UIColor] = [UIColor.hexFF8F56, UIColor.hexFF5959, UIColor.hex984A59, UIColor.hex60424C]
     weak var coordinator: MainCoordinator?
@@ -19,37 +24,26 @@ class LoginScreenVC: UIViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         view.setGradientBackground(colors: animationColors)
-//        view.backgroundColor = animationColors[0] //starts at 0
-//        colorShiftTimer = Timer.scheduledTimer(timeInterval: colorShiftDuration, target: self, selector: #selector(animateBackgroundColorAndAlpha), userInfo: nil, repeats: true)
-        //animateBackgroundWith(colors: animationColors)
+        
+        //set the placeholder text - might want to refactor this
+        usernameTextField.attributedPlaceholder = NSAttributedString(string: "Username", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        passwordTextField.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
     }
     
-//    @objc func animateBackgroundWith(timer: Timer) {
-//        let colors = timer.userInfo as! [UIColor]
-//        currentColorIndex += 1
-//
-//        if currentColorIndex < colors.count {
-//            view.backgroundColor = colors[currentColorIndex]
-//
-//            print("color changed")
-//        } else {
-//            currentColorIndex = 0
-//        }
-    
-        @objc func animateBackgroundColorAndAlpha() {
-            UIView.animate(withDuration: colorShiftDuration, animations: {
-                let colorA = self.animationColors[0]
-                self.view.backgroundColor = colorA
-                self.view.alpha = 0.1
-            }) { (_) in
-                let colorB = self.animationColors[1]
-                self.view.backgroundColor = colorB
-                self.view.alpha = 1
-            }
-        }
+    //MARK:- IBActions
+    @IBAction func loginButtonTapped(_ sender: UIButton) {
+        coordinator?.login()
     }
+    
+    @IBAction func signupButtonTapped(_ sender: UIButton) {
+        coordinator?.signup()
+    }
+    
+    
+    
+}
 
 
 

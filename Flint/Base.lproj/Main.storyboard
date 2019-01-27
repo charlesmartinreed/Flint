@@ -9,6 +9,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Amatic-Bold.ttf">
+            <string>Amatic-Bold</string>
+        </array>
+        <array key="AmaticSC-Regular.ttf">
+            <string>AmaticSC-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Match ScreenVC-->
         <scene sceneID="tne-QT-ifu">
@@ -49,12 +57,99 @@
                     <view key="view" contentMode="scaleToFill" id="xar-QR-5hd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLINT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAC-QD-1e5">
+                                <rect key="frame" x="16" y="80" width="343" height="78"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Amatic-Bold" family="Amatic" pointSize="72"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email address" textAlignment="center" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="0jw-oo-Lp3" customClass="DarkTextField" customModule="Flint" customModuleProvider="target">
+                                <rect key="frame" x="16" y="421" width="343" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="cNE-Xp-3F7"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AmaticSC-Regular" family="Amatic SC" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" textContentType="username"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ek5-HP-iGf">
+                                <rect key="frame" x="16" y="526" width="343" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="Tqy-LY-FH8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmaticSC-Regular" family="Amatic SC" pointSize="22"/>
+                                <state key="normal" title="Log In">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginButtonTapped:" destination="scw-xn-v5O" eventType="touchUpInside" id="hmp-PB-EdV"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nX6-aF-nv2">
+                                <rect key="frame" x="48" y="586" width="279" height="1"/>
+                                <color key="backgroundColor" red="0.36470588235294116" green="0.32549019607843138" blue="0.61176470588235299" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="Bff-h5-Jxr"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ocz-lN-hpB">
+                                <rect key="frame" x="16" y="595" width="343" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="IMd-Ov-R8T"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmaticSC-Regular" family="Amatic SC" pointSize="22"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="signupButtonTapped:" destination="scw-xn-v5O" eventType="touchUpInside" id="vaZ-x6-G9Z"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="center" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="gr1-1b-6AN" customClass="DarkTextField" customModule="Flint" customModuleProvider="target">
+                                <rect key="frame" x="16" y="469" width="343" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Z2y-k4-KEo"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AmaticSC-Regular" family="Amatic SC" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.5607843137254902" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="R4u-pC-ixw" firstAttribute="trailing" secondItem="Ocz-lN-hpB" secondAttribute="trailing" constant="16" id="04T-bU-NzW"/>
+                            <constraint firstItem="0jw-oo-Lp3" firstAttribute="top" secondItem="fAC-QD-1e5" secondAttribute="bottom" constant="263" id="3MD-nX-kK1"/>
+                            <constraint firstItem="fAC-QD-1e5" firstAttribute="top" secondItem="R4u-pC-ixw" secondAttribute="top" constant="60" id="4lk-qX-PgG"/>
+                            <constraint firstItem="fAC-QD-1e5" firstAttribute="leading" secondItem="R4u-pC-ixw" secondAttribute="leading" constant="16" id="74x-za-jZ7"/>
+                            <constraint firstItem="0jw-oo-Lp3" firstAttribute="leading" secondItem="R4u-pC-ixw" secondAttribute="leading" constant="16" id="82y-72-aMh"/>
+                            <constraint firstItem="Ek5-HP-iGf" firstAttribute="leading" secondItem="R4u-pC-ixw" secondAttribute="leading" constant="16" id="Big-61-UX1"/>
+                            <constraint firstItem="Ocz-lN-hpB" firstAttribute="leading" secondItem="R4u-pC-ixw" secondAttribute="leading" constant="16" id="CvH-WA-T8d"/>
+                            <constraint firstItem="R4u-pC-ixw" firstAttribute="trailing" secondItem="fAC-QD-1e5" secondAttribute="trailing" constant="16" id="DRn-dW-WPg"/>
+                            <constraint firstItem="nX6-aF-nv2" firstAttribute="top" secondItem="Ek5-HP-iGf" secondAttribute="bottom" constant="8" id="FNq-9w-3Zq"/>
+                            <constraint firstItem="gr1-1b-6AN" firstAttribute="top" secondItem="0jw-oo-Lp3" secondAttribute="bottom" constant="8" id="HfN-ck-X5v"/>
+                            <constraint firstItem="R4u-pC-ixw" firstAttribute="bottom" secondItem="Ocz-lN-hpB" secondAttribute="bottom" constant="20" id="K7g-1k-dsn"/>
+                            <constraint firstItem="nX6-aF-nv2" firstAttribute="trailing" secondItem="xar-QR-5hd" secondAttribute="trailingMargin" constant="-32" id="KTA-UH-Dvp"/>
+                            <constraint firstItem="R4u-pC-ixw" firstAttribute="trailing" secondItem="Ek5-HP-iGf" secondAttribute="trailing" constant="16" id="Luz-L9-Z7G"/>
+                            <constraint firstItem="R4u-pC-ixw" firstAttribute="trailing" secondItem="0jw-oo-Lp3" secondAttribute="trailing" constant="16" id="RxX-Rk-l2r"/>
+                            <constraint firstItem="Ek5-HP-iGf" firstAttribute="top" secondItem="gr1-1b-6AN" secondAttribute="bottom" constant="17" id="Zva-5l-Aba"/>
+                            <constraint firstItem="R4u-pC-ixw" firstAttribute="trailing" secondItem="gr1-1b-6AN" secondAttribute="trailing" constant="16" id="d6E-hK-W7f"/>
+                            <constraint firstItem="nX6-aF-nv2" firstAttribute="leading" secondItem="xar-QR-5hd" secondAttribute="leadingMargin" constant="32" id="gIC-nv-30Y"/>
+                            <constraint firstItem="fAC-QD-1e5" firstAttribute="centerX" secondItem="xar-QR-5hd" secondAttribute="centerX" id="vs2-yD-2vE"/>
+                            <constraint firstItem="gr1-1b-6AN" firstAttribute="leading" secondItem="R4u-pC-ixw" secondAttribute="leading" constant="16" id="wdD-By-DZT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="R4u-pC-ixw"/>
                     </view>
+                    <connections>
+                        <outlet property="flintLogoLabel" destination="fAC-QD-1e5" id="PvT-Iw-ZsD"/>
+                        <outlet property="passwordTextField" destination="gr1-1b-6AN" id="tCL-j6-4tH"/>
+                        <outlet property="usernameTextField" destination="0jw-oo-Lp3" id="3nV-41-AiI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tFw-B5-rhA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="611" y="66"/>
+            <point key="canvasLocation" x="610.39999999999998" y="65.217391304347828"/>
         </scene>
     </scenes>
 </document>

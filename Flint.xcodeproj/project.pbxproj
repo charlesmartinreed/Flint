@@ -19,6 +19,10 @@
 		8CDDB29B21FD658F004A5795 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDDB29A21FD658F004A5795 /* MainCoordinator.swift */; };
 		8CDDB29D21FD6911004A5795 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDDB29C21FD6911004A5795 /* Colors.swift */; };
 		8CDDB29F21FD751E004A5795 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDDB29E21FD751E004A5795 /* UIView+Extension.swift */; };
+		8CDDB2A121FD7F8B004A5795 /* LeagueSpartan-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8CDDB2A021FD7F8B004A5795 /* LeagueSpartan-Bold.otf */; };
+		8CDDB2A421FD907E004A5795 /* Amatic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8CDDB2A221FD907E004A5795 /* Amatic-Bold.ttf */; };
+		8CDDB2A521FD907E004A5795 /* AmaticSC-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8CDDB2A321FD907E004A5795 /* AmaticSC-Regular.ttf */; };
+		8CE19FE621FD960C00711DEC /* DarkTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE19FE521FD960C00711DEC /* DarkTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,10 @@
 		8CDDB29A21FD658F004A5795 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		8CDDB29C21FD6911004A5795 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		8CDDB29E21FD751E004A5795 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		8CDDB2A021FD7F8B004A5795 /* LeagueSpartan-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LeagueSpartan-Bold.otf"; sourceTree = "<group>"; };
+		8CDDB2A221FD907E004A5795 /* Amatic-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amatic-Bold.ttf"; sourceTree = "<group>"; };
+		8CDDB2A321FD907E004A5795 /* AmaticSC-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AmaticSC-Regular.ttf"; sourceTree = "<group>"; };
+		8CE19FE521FD960C00711DEC /* DarkTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkTextField.swift; sourceTree = "<group>"; };
 		92878BF17DB97EA727373466 /* Pods-Flint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flint.release.xcconfig"; path = "Pods/Target Support Files/Pods-Flint/Pods-Flint.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,7 +91,11 @@
 				8CA25F8721F5207700F05F99 /* Assets.xcassets */,
 				8CA25F8921F5207700F05F99 /* LaunchScreen.storyboard */,
 				8CA25F8C21F5207700F05F99 /* Info.plist */,
+				8CDDB2A221FD907E004A5795 /* Amatic-Bold.ttf */,
+				8CDDB2A321FD907E004A5795 /* AmaticSC-Regular.ttf */,
+				8CDDB2A021FD7F8B004A5795 /* LeagueSpartan-Bold.otf */,
 				8CDDB29C21FD6911004A5795 /* Colors.swift */,
+				8CE19FE521FD960C00711DEC /* DarkTextField.swift */,
 				8CDDB29E21FD751E004A5795 /* UIView+Extension.swift */,
 			);
 			path = Flint;
@@ -168,7 +180,10 @@
 			files = (
 				8CA25F8B21F5207700F05F99 /* LaunchScreen.storyboard in Resources */,
 				8CA25F8821F5207700F05F99 /* Assets.xcassets in Resources */,
+				8CDDB2A521FD907E004A5795 /* AmaticSC-Regular.ttf in Resources */,
+				8CDDB2A421FD907E004A5795 /* Amatic-Bold.ttf in Resources */,
 				8CA25F8621F5207600F05F99 /* Main.storyboard in Resources */,
+				8CDDB2A121FD7F8B004A5795 /* LeagueSpartan-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +242,7 @@
 				8CDDB29D21FD6911004A5795 /* Colors.swift in Sources */,
 				8CDDB29921FD64C7004A5795 /* Storyboarded.swift in Sources */,
 				8CA25F8321F5207600F05F99 /* MatchScreenVC.swift in Sources */,
+				8CE19FE621FD960C00711DEC /* DarkTextField.swift in Sources */,
 				8CA25F8121F5207600F05F99 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
