@@ -9,10 +9,14 @@
 /* Begin PBXBuildFile section */
 		5C690D42DC7BD96E7804B16D /* Pods_Flint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04118CE1FE654A7A3A438E6A /* Pods_Flint.framework */; };
 		8CA25F8121F5207600F05F99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA25F8021F5207600F05F99 /* AppDelegate.swift */; };
-		8CA25F8321F5207600F05F99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA25F8221F5207600F05F99 /* ViewController.swift */; };
+		8CA25F8321F5207600F05F99 /* MatchScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA25F8221F5207600F05F99 /* MatchScreenVC.swift */; };
 		8CA25F8621F5207600F05F99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CA25F8421F5207600F05F99 /* Main.storyboard */; };
 		8CA25F8821F5207700F05F99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CA25F8721F5207700F05F99 /* Assets.xcassets */; };
 		8CA25F8B21F5207700F05F99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CA25F8921F5207700F05F99 /* LaunchScreen.storyboard */; };
+		8CDDB29521FD6476004A5795 /* LoginScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDDB29421FD6476004A5795 /* LoginScreenVC.swift */; };
+		8CDDB29721FD648C004A5795 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDDB29621FD648C004A5795 /* Coordinator.swift */; };
+		8CDDB29921FD64C7004A5795 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDDB29821FD64C7004A5795 /* Storyboarded.swift */; };
+		8CDDB29B21FD658F004A5795 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDDB29A21FD658F004A5795 /* MainCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,11 +24,15 @@
 		11C61858C58FD276B389D4B8 /* Pods-Flint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flint.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Flint/Pods-Flint.debug.xcconfig"; sourceTree = "<group>"; };
 		8CA25F7D21F5207600F05F99 /* Flint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CA25F8021F5207600F05F99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8CA25F8221F5207600F05F99 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8CA25F8221F5207600F05F99 /* MatchScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchScreenVC.swift; sourceTree = "<group>"; };
 		8CA25F8521F5207600F05F99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8CA25F8721F5207700F05F99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CA25F8A21F5207700F05F99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8CA25F8C21F5207700F05F99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CDDB29421FD6476004A5795 /* LoginScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenVC.swift; sourceTree = "<group>"; };
+		8CDDB29621FD648C004A5795 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		8CDDB29821FD64C7004A5795 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		8CDDB29A21FD658F004A5795 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		92878BF17DB97EA727373466 /* Pods-Flint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flint.release.xcconfig"; path = "Pods/Target Support Files/Pods-Flint/Pods-Flint.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,7 +70,11 @@
 			isa = PBXGroup;
 			children = (
 				8CA25F8021F5207600F05F99 /* AppDelegate.swift */,
-				8CA25F8221F5207600F05F99 /* ViewController.swift */,
+				8CDDB29821FD64C7004A5795 /* Storyboarded.swift */,
+				8CDDB29621FD648C004A5795 /* Coordinator.swift */,
+				8CDDB29A21FD658F004A5795 /* MainCoordinator.swift */,
+				8CDDB29421FD6476004A5795 /* LoginScreenVC.swift */,
+				8CA25F8221F5207600F05F99 /* MatchScreenVC.swift */,
 				8CA25F8421F5207600F05F99 /* Main.storyboard */,
 				8CA25F8721F5207700F05F99 /* Assets.xcassets */,
 				8CA25F8921F5207700F05F99 /* LaunchScreen.storyboard */,
@@ -202,7 +214,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CA25F8321F5207600F05F99 /* ViewController.swift in Sources */,
+				8CDDB29721FD648C004A5795 /* Coordinator.swift in Sources */,
+				8CDDB29B21FD658F004A5795 /* MainCoordinator.swift in Sources */,
+				8CDDB29521FD6476004A5795 /* LoginScreenVC.swift in Sources */,
+				8CDDB29921FD64C7004A5795 /* Storyboarded.swift in Sources */,
+				8CA25F8321F5207600F05F99 /* MatchScreenVC.swift in Sources */,
 				8CA25F8121F5207600F05F99 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class ViewController: UIViewController {
+class MatchScreenVC: UIViewController {
     
     //MARK:- IBOutlets
     @IBOutlet weak var swipeImageView: UIImageView!
