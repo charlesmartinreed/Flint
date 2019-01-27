@@ -15,7 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var swipeImageView: UIImageView!
     
     //MARK:- Properties
-
+    let imageViewOffsetFromTop: CGFloat = 100.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,7 +35,25 @@ class ViewController: UIViewController {
     }
     
     @objc func itemWasDragged(recognizer: UIPanGestureRecognizer) {
-        print("dragged!")
+        let screenWidth = view.bounds.width
+        let screenHeight = view.bounds.height
+        
+        let upddatedItemPoint = recognizer.translation(in: view) //where the user is trying to move to
+        
+        swipeImageView.center = CGPoint(x: screenWidth / 2 + upddatedItemPoint.x, y: screenHeight / 2 + upddatedItemPoint.y)
+        
+        if recognizer.state == .ended {
+            //did the user swipe far enough to the left or right?
+            if swipeImageView.center.x < screenWidth / 2 - (swipeImageView.frame.width * 0.25) {
+                print("Swiped left! Not interested!")
+            }
+            
+            if swipeImageView.center.x > screenWidth / 2 + (swipeImageView.frame.width * 0.25) {
+                print("Swiped right! So thirsty!")
+            }
+            
+            swipeImageView.center = CGPoint(x: screenWidth / 2, y: screenHeight / 2 - imageViewOffsetFromTop)
+        }
     }
 
 }
