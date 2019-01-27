@@ -34,11 +34,25 @@ class LoginScreenVC: UIViewController, Storyboarded {
     
     //MARK:- IBActions
     @IBAction func loginButtonTapped(_ sender: UIButton) {
-        coordinator?.login()
+        guard let username = usernameTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        
+        //checking is handled by the coordinator here
+        guard let result = coordinator?.login(user: username, password: password) else { return }
+        if result.success == false {
+            displayAlert(title: "There was a problem logging in", message: result.details)
+        }
     }
     
     @IBAction func signupButtonTapped(_ sender: UIButton) {
-        coordinator?.signup()
+        guard let username = usernameTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        
+        guard let result = coordinator?.signup(user: username, password: password) else { return }
+        if result.success == false {
+            displayAlert(title: "There was a problem signing up", message: result.details)
+        }
+        
     }
     
     
