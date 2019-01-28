@@ -16,6 +16,7 @@ class ProfileScreenVC: UIViewController, Storyboarded {
     @IBOutlet weak var usernameButton: UIButton!
     @IBOutlet weak var userSegControl: UISegmentedControl!
     @IBOutlet weak var userPrefSegControl: UISegmentedControl!
+    @IBOutlet weak var userBioTextView: UITextView!
     
     //MARK:- Properties
     weak var coordinator: MainCoordinator?
@@ -43,22 +44,23 @@ class ProfileScreenVC: UIViewController, Storyboarded {
     }
     
     
+    
+    
     func saveProfileChanges() {
         //trigered when the user either leaves by clicking the X button or as soon as a change is detected in one of the interactable fields
         print("profile settings updated")
     }
-    
-    
-    
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension ProfileScreenVC : UITextViewDelegate {
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        //slide the screen up by the keyboard's width to allow editing
+        
     }
-    */
-
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        //save the changes to the user object
+        
+        //resign responder and move elements back to proper positoin
+    }
 }
